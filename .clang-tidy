@@ -1,0 +1,19 @@
+Checks: "*,
+-*-header-guard,
+-*-implementation-in-namespace,
+-*-use-trailing-return-type,
+-*-unroll-loops,
+-*-id-dependent-backward-branch,
+-*-identifier-length,
+-*-default-arguments-calls,
+-*-callee-namespace,
+-*-use-anonymous-namespace,
+-*-avoid-do-while,
+-*-struct-pack-align,
+-*-easily-swappable-parameters,
+-*-avoid-magic-numbers,
+-*-magic-numbers,
+"
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+FormatStyle: none

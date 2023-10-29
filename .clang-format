@@ -1,0 +1,10 @@
+BasedOnStyle: Google
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Always
+AllowShortEnumsOnASingleLine: true
+BinPackArguments: false
+BinPackParameters: false
+ColumnLimit: 100
+DerivePointerAlignment: false
+PointerAlignment: Left
+KeepEmptyLinesAtTheStartOfBlocks: True

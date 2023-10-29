@@ -14,8 +14,9 @@ for the problem of interest. Some features include:
 SimpleFE1DCalc requires the Boost math library and Eigen3.
 
 For example, the weak residual integrand for a single-species diffusion/reaction problem like
-$$ \frac{\text{d} R}{\text{d} z} = w c \frac{\partial u}{\partial t} + \frac{\text{d}w}{\text{d}z} k \frac{\partial
-u}{\partial z} + w r u - w f $$
+```math
+\frac{\text{d} R}{\text{d} z} = w c \frac{\partial u}{\partial t} + \frac{\text{d}w}{\text{d}z} k \frac{\partial u}{\partial z} + w r u - w f
+```
 would be implemented as a functor such as:
 
 ```c++

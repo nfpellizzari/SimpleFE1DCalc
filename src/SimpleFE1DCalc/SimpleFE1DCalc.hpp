@@ -195,9 +195,9 @@ struct EssentialBC {
 
 template <class F, std::floating_point T>
 struct Problem {
-  F functor{};
-  Eigen::Matrix<T, Eigen::Dynamic, 1> mesh{};
-  std::vector<EssentialBC<T>> essential_bcs{};
+  const F& functor{};
+  const Eigen::Matrix<T, Eigen::Dynamic, 1>& mesh{};
+  const std::vector<EssentialBC<T>>& essential_bcs{};
 };
 
 /**

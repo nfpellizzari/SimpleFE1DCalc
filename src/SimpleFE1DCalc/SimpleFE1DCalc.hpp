@@ -174,9 +174,11 @@ static void compute_element_residuals(
     const auto fields = nodal_field_matrix.transpose() * sf;
     const auto fields_ddz = nodal_field_matrix.transpose() * sf_ddz;
     const auto fields_ddt = nodal_field_time_derivative_matrix.transpose() * sf;
+    const auto fields_ddt_ddz = nodal_field_time_derivative_matrix.transpose() * sf_ddz;
 
-    nodal_residual_matrix += w * functor.compute_weak_residual_integrand(
-                                     t, z, fields, fields_ddz, fields_ddt, sf, sf_ddz);
+    nodal_residual_matrix +=
+        w * functor.compute_weak_residual_integrand(
+                t, z, fields, fields_ddz, fields_ddt, fields_ddt_ddz, sf, sf_ddz);
   }
 }
 

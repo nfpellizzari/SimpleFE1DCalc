@@ -29,14 +29,15 @@ struct DiffusionReactionFunctor {
   double r{};
   double f{};
 
-  template <class E1, class E2, class E3, class E4, class E5>
+  template <class E1, class E2, class E3, class E4, class E5, class E6>
   auto compute_weak_residual_integrand(const double t,
                                        const double z,
                                        const Eigen::MatrixBase<E1>& fields,
                                        const Eigen::MatrixBase<E2>& fields_ddz,
                                        const Eigen::MatrixBase<E3>& fields_ddt,
-                                       const Eigen::MatrixBase<E4>& sf,
-                                       const Eigen::MatrixBase<E5>& sf_ddz) const {
+                                       const Eigen::MatrixBase<E4>& fields_ddt_ddz,
+                                       const Eigen::MatrixBase<E5>& sf,
+                                       const Eigen::MatrixBase<E6>& sf_ddz) const {
     return sf * c * fields_ddt(u) + sf_ddz * k * fields_ddz(u) + sf * r * fields(u) - sf * f;
   }
 };

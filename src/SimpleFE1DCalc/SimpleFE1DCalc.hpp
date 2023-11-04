@@ -167,7 +167,7 @@ static void compute_element_residuals(
 
     const auto sf_ddr = compute_sf<T, SF_ORDER, 1>(point.abscissa);
     const auto z_ddr = sf_ddr.dot(mesh);
-    const auto sf_ddz = sf_ddr * z_ddr;
+    const auto sf_ddz = sf_ddr / z_ddr;
 
     const auto w = point.weight * z_ddr;
 
